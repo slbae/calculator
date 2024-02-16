@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div id="calculator">
+        <input id="calc-display" type="text" onkeydown="handleKeyPress(event)">
+        <div>
+            <button onclick="updateDisplay('7')">7</button>
+            <button onclick="updateDisplay('8')">8</button>
+            <button onclick="updateDisplay('9')">9</button>
+            <button onclick="updateDisplay('/')">/</button>
+        </div>
+        <div>
+            <button onclick="updateDisplay('4')">4</button>
+            <button onclick="updateDisplay('5')">5</button>
+            <button onclick="updateDisplay('6')">6</button>
+            <button onclick="updateDisplay('*')">X</button>
+        </div>
+        <div>
+            <button onclick="updateDisplay('1')">1</button>
+            <button onclick="updateDisplay('2')">2</button>
+            <button onclick="updateDisplay('3')">3</button>
+            <button onclick="updateDisplay('-')">-</button>
+        </div>
+        <div>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="updateDisplay('0')">0</button>
+            <button onclick="updateDisplay('.')">.</button>
+            <button onclick="updateDisplay('+')">+</button>
+        </div>
+        <div id="equals">
+            <button onclick="calculate()">=</button>
+            <class id="change">
+                <button onclick="changeSign()">+/-</button>
+            </class>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="history-container">
+        <div id="history">
+            <ul id="history-list"></ul>
+        </div>
+        <button id="clearHistory" onclick="clearHistory()">Clear History</button>
+    </div>
+    <script src="js/calc.js"></script>
+</body>
+
+</html>
